@@ -1,0 +1,34 @@
+/* div {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+} */
+.menu-image {
+	/* border-collapse: collapse; */
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+}
+
+.container {
+	position: center;
+	height: 50%;
+	width: 50%;
+	top: 0;
+	left: 0;
+}
+
+.list-group {
+	position: absolute;
+	font-family: Georgia;
+	font-size: 3em;
+	margin: auto;
+	left: 20%;
+	right: 0;
+	top: 35%;
+	color: white;
+}
