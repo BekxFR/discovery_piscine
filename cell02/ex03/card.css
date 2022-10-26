@@ -1,0 +1,108 @@
+body {
+	font-size: 12px;
+	font-family: Comic Sans MS;
+	padding: 150px 0;
+	display: flex;
+	justify-content: center;
+}
+
+div#main-card {
+	max-width: 300px;
+	background: #f9f9f9;
+	box-shadow: -5px 5px 18px 4px rgb(52, 52, 52);
+}
+
+.cover-photo {
+	background: #2c2c34;;
+	width: 300px;
+	height: 100px;
+}
+
+.photo {
+	width: 300px;
+	height: 100px;
+	display: -webkit-box;
+	-webkit-box-pack: center;
+}
+img {
+	position: relative;
+	top: -50px;
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: 50%;
+	box-shadow: -5px 5px 11px 6px rgba(237, 218, 218, 0.208);
+}
+.content {
+	background: #f9f9f9;
+	width: 300px;
+	height: 100px;
+	position: relative;
+	top: -30px;
+}
+
+.contact {
+	background: #00babc;
+	width: 300px;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+}
+
+h2.name, h3, a {
+	margin: 0;
+	text-align: center;
+}
+
+h2.name {
+	padding-bottom: 30px;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #0ab581;
+}
+
+ul {
+	padding: 0;
+}
+
+.fa {
+	font-size: 22px;
+	padding: 10px;
+	text-decoration: none;
+	color: black;;
+}
+
+.fa:hover {
+	color: white;
+}
+
+a.certified {
+  color: black;
+  cursor: pointer;
+}
+
+a.certified:hover {
+  color: #0ab581;
+}
+
+div#main-card:hover {
+	animation-name: pulse;
+	animation-duration: 2s;
+	animation-fill-mode: both;
+}
+	@keyframes pulse {
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+	50% {
+		transform: scale3d(1.05, 1.05, 1.05);
+	}
+	100% {
+		transform: scale3d(1, 1, 1);
+	}
+} 
