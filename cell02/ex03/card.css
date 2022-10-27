@@ -6,6 +6,10 @@ body {
 	justify-content: center;
 }
 
+div#test {
+	border-radius: 50%;
+}
+
 div#main-card {
 	max-width: 300px;
 	background: #f9f9f9;
@@ -27,7 +31,7 @@ div#main-card {
 img {
 	position: relative;
 	top: -50px;
-	max-width: 100%;
+	max-width: 50%;
 	max-height: 100%;
 	border-radius: 50%;
 	box-shadow: -5px 5px 11px 6px rgba(237, 218, 218, 0.208);
@@ -44,6 +48,14 @@ img {
 	background: #00babc;
 	width: 300px;
 	height: 50px;
+	display: flex;
+	justify-content: center;
+}
+.contact2 {
+	background: rgb(52, 52, 52);
+	color:white;
+	width: 300px;
+	height: 30px;
 	display: flex;
 	justify-content: center;
 }
