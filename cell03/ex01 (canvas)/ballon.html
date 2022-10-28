@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="background.css">
+		<style>
+			.Ccanvas
+			{
+				border-radius: 50%;
+			}
+
+		</style>
+	</head>
+	<body>
+		<canvas class="Ccanvas" height="400px" width="400px" id="myCanvas" onmouseout="f_downSize()" onclick="f_varySize()"> </canvas>
+		<div  onclick="agc()" onmouseout="aout()"  id="moncercle"></div>
+		<script type="text/javascript">
+			var g_canvas = document.getElementById("myCanvas");
+			var g_context = g_canvas.getContext("2d");
+			var dir = 5;
+			let color = 0;
+			var g_radius = 100;
+			var canvas_size = 100;
+			g_context.fillStyle = "red";
+			f_drawCircle();
+			function f_drawCircle() {
+				g_context.beginPath();
+				g_context.arc(200, 200, g_radius, 0, 20 * Math.PI);
+				g_context.fill();
+			}
+			function f_varySize() {
+				if (g_radius < 205) {
+					g_radius += dir;
+					if (color == 0)
+					{
+						g_context.fillStyle = "green";
+						color = 1;
+						console.log(10);
+					}
+					else if (color == 1)
+					{
+						g_context.fillStyle = "blue";
+						color = 2;
+					}
+					else if (color == 2)
+					{
+						g_context.fillStyle = "red";
+						color = 0;
+					}
+					if (g_radius == 200){
+						g_context.clearRect(0, 0, g_canvas.width, g_canvas.height);
+						g_radius = 100;
+					}
+					f_drawCircle();
+				}
+				console.log(g_radius);
+				console.log(color);
+			}
+			function f_downSize() {
+				if (g_radius > 100) {
+					g_radius -= dir;
+					if (color == 0)
+					{
+						g_context.fillStyle = "green";
+						color = 1;
+						console.log(10);
+					}
+					else if (color == 1)
+					{
+						g_context.fillStyle = "blue";
+						color = 2;
+					}
+					else if (color == 2)
+					{
+						g_context.fillStyle = "red";
+						color = 0;
+					}
+					g_context.clearRect(0, 0, g_canvas.width, g_canvas.height);
+					document.body.style.backgroundColor = "white";
+					f_drawCircle();
+				}
+				console.log(g_radius);
+				console.log(color);
+			}
+		</script>
+	</body>
+</html>

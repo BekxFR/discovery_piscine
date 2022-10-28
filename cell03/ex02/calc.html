@@ -1,0 +1,47 @@
+<html>
+	<head>
+		<style>
+		</style>
+	</head>
+	<body>
+		<div class="Calc">
+			<input type="text" id="Value1" name="value1" min="1">
+			<select name ="operator" id="ope-select">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input type="text" id="Value2" name="value2" min="1">
+			<input type="submit" value="Try me!" onclick="ft_calc()">
+		</div>
+		<script>
+			function ft_calc(){
+				var number1 = document.getElementById("Value1").value;
+				var number2 = document.getElementById("Value2").value;
+				number1 = parseInt(number1);
+				number2 = parseInt(number2);
+				var operator = document.getElementById("ope-select").value;
+				let result = 0;
+				if (number1 < 0 || number2 < 0){
+					window.alert("Error :(");
+					return (console.log("Error :("));}
+				if(number1 == 0 || number2 == 0)
+				{
+					if (operator == "/" || operator == "%")
+					{
+					window.alert("It's over 9000!");
+					return(console.log("It's over 9000!"));
+					}
+				}
+				result = eval(`${number1} ${operator} ${number2}`);
+				window.alert(result);
+				return(console.log(result));
+			}
+			setInterval(function ft_alert(){
+				window.alert("Please, use me...");  
+			}, 30000);
+		</script>
+	</body>
+</html>

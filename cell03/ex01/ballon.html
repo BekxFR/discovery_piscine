@@ -1,22 +1,56 @@
 <html>
 	<head>
-		<link rel="stylesheet" href="background.css">
 		<style>
-			.circle
-			{
-				margin-top: 1px;
-				margin-left: 1px;
-				height:200px;
-				width:200px;
-				background-color: brown;
-				border-radius: 50%;
+			#moncercle{
+			background:red;
+			border-radius:50%;
+			width: 200px;
+			height:200px;
+			position :absolute;
+			top : 10%;
+			left: 10%;
+			transform:tanslate(-50%,-50%);
 			}
-
 		</style>
 	</head>
-	<body onload="func()">
-		<div id="ccircle" class="circle"></div>
+	<body>
+		<div id="moncercle" onclick="agc()" onmouseout="aout()"></div>
 		<script type="text/javascript">
+			function agc(){
+				var obj = document.getElementById('moncercle');
+				var long = obj.clientWidth;
+			if (obj.style.backgroundColor == "red") {
+				obj.style.backgroundColor = "green";
+			}else if (obj.style.backgroundColor == "green") {
+				obj.style.backgroundColor = "blue";
+			}else {
+				obj.style.backgroundColor = "red"; 
+			}
+			if(long < 420) {
+				obj.style.width= long + 10 + "px";
+				obj.style.height= long + 10 + "px";
+			}else{
+				obj.style.width= 200 + "px";
+				obj.style.height= 200 + "px";
+			}
+			}
+			function aout(){
+				var obj = document.getElementById('moncercle');
+				var long = obj.clientWidth;
+				var	i = obj.style.width;
+				var  j = obj.style.height;
+			if (obj.style.backgroundColor == "blue") {
+				obj.style.backgroundColor = "green";
+			}else if (obj.style.backgroundColor == "green") {
+				obj.style.backgroundColor = "red";
+			}else {
+				obj.style.backgroundColor = "blue"; 
+			}
+			if(long >= 205) {
+				obj.style.width= long - 5 + "px";
+				obj.style.height= long - 5 + "px";
+			}
+			}
 		</script>
 	</body>
 </html>
